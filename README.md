@@ -82,5 +82,5 @@ This project is licensed under the MIT License. For more details, see the [LICEN
 ## ✨ Contact
 If you have any questions, feel free to reach out:
 
-- **GitHub**: [Username](https://github.com/enescopler)
+- **GitHub**: [enescopler](https://github.com/enescopler)
 - **Email**: enes_gs_ua_06@hotmail.com
