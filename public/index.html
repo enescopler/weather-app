@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <link rel="icon" href="/assets/images/weather-app-icon.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Weather App</title>
+</head>
+<body>
+   <!-- NAVBAR SECTION  -->
+   <header class="navbar">
+    <h1 class="navbar_title">Weather App</h1>
+    <ul>
+      <li class="navbar_links">
+        <a href="#weather">Home</a>
+        <a href="#features">Features</a>
+        <a href="#about">About</a>
+      </li>
+    </ul>
+    <a class="navbar_contact-btn" href="#contact">Contact</a>      
+    <a id="dropdown-icon" class="navbar_dropdown">
+      <img class="dropdown" src="/assets/svg/hamburger-menu-icon.svg" alt="dropdown-menu-icon">
+    </a>     
+  </header>
+
+   <!-- OPEN DROPDOWN -->
+   <div class="open-dropdown">
+    <div class="open-dropdown-wrapper">
+      <div class="open-dropdown_close">
+        <a class="open-dropdown_close_btn">
+          <img src="/assets/svg/hamburger-close-icon.svg" alt="dropdown-close-icon">
+        </a>
+      </div>
+      <nav class="open-dropdown_links">
+        <a href="#weather">Home</a>
+        <a href="#features">Features</a>
+        <a href="#about">About</a>
+      </nav>
+      <div class="open-dropdown_contact">
+        <a class="openDropdown-btn" href="#contact">Contact</a>
+      </div>
+    </div>      
+  </div>
+  
+  <!-- WEATHER APP SECTION --> 
+   <section id="weather" class="weather-section">
+    <div class="weather-app">
+      <div class="search">
+        <div class="search-icon">
+          <img src="/assets/svg/search-icon.svg" alt="search-icon">
+          <input type="text" class="search-input" placeholder="Enter city name" required>
+        </div>
+        <button class="search-btn js-search-btn">Search</button>
+      </div>
+      <div class="weather">
+        <div class="weather-info">
+          <div class="city-date">
+            <h1 class="day"></h1>
+            <p class="date"></p>
+            <div class="location">
+              <img src="/assets/svg/Location.svg" alt="location-icon" width="20px" height="20px">
+              <p class="city"></p>
+            </div>
+          </div>
+          <div class="weather-icon">
+            <img class="js-weather-icon" src="/assets/svg/weather-icon/white-sun-icon.svg" alt="cloudy-icon" width="60px" height="60px">
+            <h1 class="temp js-main-temp"></h1>
+            <h2 class="sky"></h2>
+          </div>
+        </div>
+        <div class="details">
+          <div class="col-1">
+            <div class="row-1">
+              <h3>DESCRIPTION</h3>
+              <h3>HUMIDITY</h3>
+              <h3>WIND</h3>
+            </div>
+            <div class="row-2">
+              <p class="precipitation"></p>
+              <p class="humidity"></p>
+              <p class="wind"></p>
+            </div>
+          </div>
+          <div class="col-2">
+            <div class="days">
+              <img class="day-weather-icon1" src="/assets/svg/weather-icon/white-sun-icon.svg" alt="cloudy" width="40px" height="40px">
+              <div class="day js-day"></div>
+              <div class="temp js-temp1"></div>
+            </div>
+            <div class="days">
+              <img class="day-weather-icon2" src="/assets/svg/weather-icon/cloud-icon.svg" alt="cloudy" width="40px" height="40px">
+              <div class="day js-day1"></div>
+              <div class="temp js-temp2"></div>
+            </div>
+            <div class="days">
+              <img class="day-weather-icon3" src="/assets/svg/weather-icon/rain-icon.svg" alt="cloudy" width="40px" height="40px">
+              <div class="day js-day2"></div>
+              <div class="temp js-temp3"></div>
+            </div>
+            <div class="days">
+              <img class="day-weather-icon4" src="/assets/svg/weather-icon/cloud-sun-icon.svg" alt="cloudy" width="40px" height="40px">
+              <div class="day js-day3"></div>
+              <div class="temp js-temp4"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+   </section> 
+   
+   <!-- FEATURES SECTION -->
+   <section id="features" class="features">
+    <div class="features-wrapper">
+      <div class="features-title">
+        <h1>Features</h1>
+      </div>
+      <div class="features-cards">
+        <div class="card">
+          <img src="/assets/svg/weather-icon/white-sun-icon.svg" alt="sun-icon" width="50px" height="50px">
+          <h2>Sunny</h2>
+          <p class="card-text">The weather is completely clear and sunny, with no clouds or precipitation.</p>
+        </div>
+        <div class="card">
+          <img src="/assets/svg/weather-icon/cloud-icon.svg" alt="cloud-icon" width="50px" height="50px">
+          <h2>Cloudy</h2>
+          <p class="card-text">The sky is mostly or completely covered by clouds, with little to no sunlight visible.</p>
+        </div>
+        <div class="card">
+          <img src="/assets/svg/weather-icon/rain-icon.svg" alt="rain-icon" width="50px" height="50px">
+          <h2>Rainy</h2>
+          <p class="card-text">It is raining, usually light or moderate rain showers.</p>
+        </div>
+        <div class="card">
+          <img src="/assets/svg/weather-icon/cloud-sun-icon.svg" alt="rain-icon" width="50px" height="50px">
+          <h2>Partly Cloudy</h2>
+          <p class="card-text">There are some clouds in the sky, but the sun is still visible.</p>
+        </div>
+        <div class="card">
+          <img src="/assets/svg/weather-icon/snow-icon.svg" alt="snow-icon" width="50px" height="50px">
+          <h2>Snowy</h2>
+          <p class="card-text">It is snowing, usually light or moderate snow showers.</p>
+        </div>
+        <div class="card">
+          <img src="/assets/svg/weather-icon/thunderstorm-white-icon.svg" alt="fog-icon" width="50px" height="50px">
+          <h2>Thunderstorm</h2>
+          <p class="card-text">There is a thunderstorm, with lightning and/or rain.</p>
+        </div>
+        <div class="card">
+          <img src="/assets/svg/weather-icon/white-fog-icon.svg" alt="fog-icon" width="50px" height="50px">
+          <h2>Foggy</h2>
+          <p class="card-text">There is fog, usually moderate or heavy fog.</p>
+        </div>
+        <div class="card">
+          <img src="/assets/svg/weather-icon/misty-white-icon.svg" alt="fog-icon" width="50px" height="50px">
+          <h2>Misty</h2>
+          <p class="card-text">There is mist, usually light or moderate mist.</p>
+        </div>
+        <div class="card">
+          <img src="/assets/svg/weather-icon/drizzle-icon.svg" alt="drizzle-icon" width="50px" height="50px">
+          <h2>Drizzle</h2>
+          <p class="card-text">There is drizzle, usually light or moderate drizzle.</p>
+        </div>
+      </div>
+    </div>
+   </section>
+
+   <!-- ABOUT SECTION -->
+   <section id="about" class="about">
+    <div class="about-wrapper">
+      <div class="about-content">
+        <h1 class="about-title">About</h1>
+        <p class="about-description">Weather App is a web application that allows users to easily access real-time weather information. It retrieves weather data for cities around the world from reliable sources, providing quick and accurate information to users.</p>
+        <h3 class="about-features">Features: </h3>
+        <ul class="about-list">
+          <li class="about-list-item">Current weather: View up-to-date weather information for your location or selected cities</li>
+          <li class="about-list-item">Weather forecast: Get weather predictions for up to 4 days.</li>
+          <li class="about-list-item">Detailed data: Temperature, wind speed, humidity.</li>
+        </ul>
+        <h3 class="about-design">User-Friendly Design:</h3>
+        <p class="about-description">With its simple and intuitive interface, the app is easily accessible for users of all ages.</p>
+      </div>
+      <div class="about-image">
+        <img src="/assets/images/about-image.png" alt="about-image" width="500px" height="500px">
+      </div>
+    </div>
+   </section>
+
+   <!-- CONTACT SECTION -->
+    <section id="contact" class="contact">
+      <div class="contact-wrapper">
+        <div class="contact-image">
+          <img src="/assets/images/contact-image.png" alt="contact-image" width="600px" height="600px">
+        </div>
+        <div class="contact-comment" >
+          <div class="contact-content">
+            <h1 class="contact-title">Contact Us</h1>
+            <p class="contact-description">If you have any questions or comments about the weather app, feel free to reach out to us.</p>            
+          </div>
+          <div class="contact-form">
+            <form class="contact-form" action="#" method="POST">
+              <div class="contact-name">
+                <label for="name">Name:</label>
+                <img class="name-icon" src="/assets/svg/contact-icon/name-icon.svg" alt="name-icon">
+                <input type="text" id="name" name="name" placeholder="Tommy Shelby" required>
+              </div>
+              <div class="contact-email">
+                <label for="email">Email:</label>
+                <img class="email-icon" src="/assets/svg/contact-icon/email-icon.svg" alt="email-icon">
+                <input type="email" id="email" name="email" placeholder="e.g name@example.com" required>
+              </div>
+              <div class="contact-message">
+                <label for="message">Message:</label>
+                <img class="message-icon" src="/assets/svg/contact-icon/message-icon.svg" alt="message-icon">
+                <textarea id="message" name="message" placeholder="Enter your message..." required></textarea>
+              </div>
+              <button class="contact-submit" type="submit">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER SECTION -->
+    <footer class="footer">
+      <div class="footer-wrapper">
+        <div class="footer-row">
+          <div class="footer-col-left">
+            <h1 class="footer-logo">Weather App</h1>
+            <p class="footer-description">Weather App is a web application that allows users to easily access real-time weather information. </p>
+          </div>
+          <div class="footer-col-md">
+            <a href="#weather">Home</a>
+            <a href="#features">Features</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+          </div>
+          <div class="footer-col-right">
+            <a href="#privacy">Privacy Policy</a>
+            <a href="#terms">Terms & Conditions</a>
+          </div>
+          <div class="footer-col-icon">
+            <div class="footer-icon">
+              <a href="https://www.instagram.com/enescopler" target="_blank">
+                <img src="/assets/svg/footer-icon/instagram-white-icon.svg" alt="instagram-icon">
+              </a>  
+              <a href="https://www.facebook.com/" target="_blank">
+                <img src="/assets/svg/footer-icon/facebook-white-icon.svg" alt="facebook-icon">
+              </a>
+              <a href="https://www.x.com/" target="_blank">
+                <img src="/assets/svg/footer-icon/twitter-white-icon.svg" alt="x-icon">
+              </a>
+              <a href="https://www.github.com/enescopler" target="_blank">
+                <img src="/assets/svg/footer-icon/github-white-icon.svg" alt="github-icon">
+              </a>
+            </div>
+              <a class="footer-button" href="#contact">Contact</a>
+          </div>
+        </div>
+        <div class="footer-divider">
+          <hr>
+        </div>
+        <div class="footer-row-bottom">
+          <div class="footer-col">
+            <small>&copy; 2024 Weather App. All rights reserved.</small>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  <script type="module" src="script.js" defer></script>
+</body>
+</html>
