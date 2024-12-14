@@ -8,13 +8,14 @@
   <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="icon" href="/assets/images/weather-app-icon.png">
   <link rel="stylesheet" href="style.css">
   <title>Weather App</title>
 </head>
 <body>
    <!-- NAVBAR SECTION  -->
-   <header class="navbar">
+   <header id="header" class="navbar">
     <h1 class="navbar_title">Weather App</h1>
     <ul>
       <li class="navbar_links">
@@ -47,6 +48,19 @@
       </div>
     </div>      
   </div>
+
+  <!-- MODAL POPUP NOT FOUND 404 -->
+  <div class="modal" id="modal">
+    <div class="modal-content">
+      <h2 class="modal-title">Oooppss,</h2>
+      <p class="modal-text">Location Not Found Please Try Again !</p>
+    </div>
+    <img src="assets/svg/not-found-img.svg" alt="not-found-image" width="400px">
+    <button class="modal-btn">
+      <i class="fa-solid fa-arrow-left-long" style="color: #ffffff; font-size: 2rem;"></i>
+      Go Back
+    </button>
+   </div>
   
   <!-- WEATHER APP SECTION --> 
    <section id="weather" class="weather-section">

@@ -135,6 +135,9 @@ searchBtnElement.addEventListener("click", async () => {
  * @param {string} API_KEY - The API key to use when making the request to the OpenWeatherMap API.
  */
 const getCurrentWeather = async (city, API_KEY) => {
+  const modal = document.querySelector(".modal");
+  const modalCloseBtn = document.querySelector(".modal-btn");
+  const headerElement = document.getElementById("header");
   try {
     const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`;
     const response = await fetch(apiUrl);
@@ -149,8 +152,28 @@ const getCurrentWeather = async (city, API_KEY) => {
     // Display the current weather data.
     displayCurrentWeather(data);
   } catch (error) {
+    // console.error("Failed: ", error);
+    // alert("Weather data could not be fetched. Please try again.");
+    // Log and alert the user in case of an error.
     console.error("Failed: ", error);
-    alert("Weather data could not be fetched. Please try again.");
+    // Show the modal with an error message.
+    modal.classList.add("active");
+    // Blur the header element and disable pointer events.
+    headerElement.style.filter = "blur(5px)";
+    headerElement.style.pointerEvents = "none";
+    
+    // Add an event listener to the modal close button.
+    modalCloseBtn.addEventListener("click", () => {
+      // Add a fade out animation to the modal.
+      modal.classList.add("fadeOut");
+      // Remove the active class and blur filter after the animation is complete.
+      setTimeout(() => {
+        modal.classList.remove("active");
+        headerElement.style.filter = "none";
+      }, 500);
+    });
+    // Remove the fade out animation class.
+    modal.classList.remove("fadeOut");
   }
 };
 
@@ -187,7 +210,6 @@ const getForecastWeather = async (city, API_KEY) => {
   } catch (error) {
     // Log any errors that occur and alert the user.
     console.error("Failed: ", error);
-    alert("Forecast data could not be fetched. Please try again.");
   }
 };
 
