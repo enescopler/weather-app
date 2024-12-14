@@ -170,6 +170,7 @@ const getCurrentWeather = async (city, API_KEY) => {
       setTimeout(() => {
         modal.classList.remove("active");
         headerElement.style.filter = "none";
+        headerElement.style.pointerEvents = "auto";
       }, 500);
     });
     // Remove the fade out animation class.
